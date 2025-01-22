@@ -1,0 +1,291 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+% \usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingg}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    {\Huge \scshape Aditya Tomar} \\ \vspace{8pt}
+    % 123 Street Name, Town, State 12345 \\ \vspace{1pt}
+    \small 
+    \href{mailto:aarush@thedvlprguy.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{aditya@thedvlprguy.com}} ~ 
+    \href{https://thedvlprguy.com}{\raisebox{-0.2\height}\faLink\   \underline{thedvlprguy.com}} ~
+    % \href{tel://+919977955466}{\raisebox{-0.2\height}\faPhone\   \underline{+91 9977955466}} ~
+    \href{https://linkedin.com/in/aarush-bhat/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/aditya-bhai}}  ~
+    \href{https://github.com/thedvlprguy}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/thedvlprguy}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology, Vellore}{Jul 2023 -- Jul 2027}
+      {B.Tech in Computer Science and Engineering}{7.83, CGPA}
+  \resumeSubHeadingListEnd
+  
+%------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     \resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+ \resumeSubheadingg
+      {\href{https://mlh.io/}{MLH}}{Jan 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Linux Kernal Developer and Tester (ASM, Compiler Design, Automata)}
+        \resumeItem{Developing a custom interpreter and integrating a comprehensive test suite to validate language features, with a focus on low-level systems programming and kernel development techniques..}
+    \resumeItemListEnd
+ \resumeSubheadingg
+      {\href{https://aurax.co.in/}{Aurax.com, Frontend Engineer}}{May 2023 -- Oct 2023}
+      \resumeItemListStart
+        \resumeItem{Designed and coded \underline{\href{https://aurax.co.in/}{Aurax}}. (Augmented Reality Platform)}
+        \resumeItem{Introduced the AR Features to the website using unity and threejs.}
+    \resumeItemListEnd
+
+    \resumeSubheadingg
+      {\href{https://algabay.com}{Algabay}}{Jul 2023 -- Sept 2023}
+      \resumeItemListStart
+        \resumeItem{Frontend Developer at \underline{\href{https://algabay.com}{}}(React + Javascript)}
+        \resumeItem{Authored support for frontend.}
+    \resumeItemListEnd
+
+  
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+% %-----------PROJECTS-----------
+% \section{Projects}
+%     \vspace{-5pt}
+%     \resumeSubHeadingListStart
+%       \resumeProjectHeading
+%           {\textbf{\href{https://github.com/EnchanteHQ/}{Enchante \faGithub}} $|$ \emph{TypeScript, MongoDB, Augmented reality, OAuth, Azure}}{Jul 2021}
+%           \resumeItemListStart
+%             \resumeItem{Enchanté is an attempt to reinvent the traditional transaction system and taking contactless payment to a whole new level by adopting bleeding-edge technology such as Augmented reality and nearby payments within eyesight.}
+%           \resumeItemListEnd
+%           \vspace{-13pt}
+%       \resumeProjectHeading
+%           {\textbf{\href{https://github.com/thedvlprguy/ebpf-keylogger}{eBPF Keylogger \faGithub}} $|$ \emph{Python, C, eBPF, Linux}}{Nov 2021}
+%           \resumeItemListStart
+%             \resumeItem{Utilizes the power of eBPF to build a keylogger that can be used for monitoring or logging}
+%             \resumeItem{Built using BCC toolkit to enable creating efficient kernel tracing and manipulation programs.}
+%           \resumeItemListEnd 
+%           \vspace{-13pt}
+%           \resumeProjectHeading
+%           {\textbf{\href{https://github.com/DarthBenro008/greencredus}{GreenCredUs \faGithub}} $|$ \emph{JavaScript, Blockchain, Sustainability}}{Feb 2021}
+%           \resumeItemListStart
+%             \resumeItem{A carbon credit system implemented on general public to help save the environment.}
+%             \resumeItem{Implements cryptocurrency built on the Tezos network and an app built over React.js.}
+%           \resumeItemListEnd 
+%     \resumeSubHeadingListEnd
+% \vspace{-15pt}
+
+%
+%-----------SKILLS AND INTERESTS-----------
+\section{Open Source Contributions}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\href{https://github.com/TheAlgorithms/Python}{Implemented the Hungarian Algorithm}}{: The-Algorithms} \\
+     \textbf{\href{https://github.com/Galaxies-dev}{Nextjs}}{: Added UI allocation features to nextjs under the mentees of Galaxies Dev .} \\
+     \textbf{\href{https://github.com/Jhwach/polkadot-wiki}{Polkadot}}{: I implemented various enhancements and updates to the Web3 library, focusing on improving functionality, performance, and compatibility with the latest blockchain standards.} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%
+%-----------SKILLS AND INTERESTS-----------
+\section{Skills and Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: ASM, Bash, C, Cpp, Java, R, JavaScript, Python, Golang} \\
+     \textbf{Technologies}{: Kernal Developement, linux, grubLoader, IPFS, Cybersecurity, Red Teaming} \\
+     \textbf{Languages}{: English, Sanskrit, Hindi, German} \\
+     \textbf{Interests}{: Anime, Boxing, Mechanical Keyboards} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------LEADERSHIP---------------
+\section{Leadership / Extracurricular}
+    \resumeSubHeadingListStart
+        \resumeSubheadingg{{Ambassdor, \href{https://mvp.microsoft.com/}{Microsoft Learn}}}{Dec 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{Microsoft Learn Student Ambassadors is a global community of students passionate about technology and driven to empower others through technical skills.}  
+\resumeItem{As a Student Ambassador, contributed to fostering technical growth by organizing workshops, webinars, and hackathons, impacting hundreds of students worldwide.}  
+\resumeItem{Actively promoted the adoption of Microsoft technologies, including Azure, GitHub, and Visual Studio Code, while collaborating with a diverse network of student leaders.}  
+\resumeItem{Guided peers and fellow students in exploring cutting-edge technology, developing real-world projects, and enhancing their professional and technical skill sets.}
+
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+%-----------Publications-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubheadingg
+      {\href{https://www.researchgate.net/publication/385891164_Clean_Energy_Prediction_Using_Support_Vector_Machines}{Clean Energy Prediction using Support Vector Machines}}{Nov 2024}
+      \resumeItemListStart
+        \resumeItem{A Tomar, A Anant, Pallavi Mishra. \textit{IEEE 2024 6th International Conference on Electrical, Control and Instrumentation Engineering 2024}. Kuala Lumpur, Malaysia}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------Certification-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubheadingg
+      {AI/ML For Geodata Analysis}{August 2024}
+      \resumeItemListStart
+        \resumeItem{ISRO employs AI and ML to analyze geospatial data, enhancing satellite imagery processing for applications like crop monitoring, disaster management, and environmental analysis. These technologies improve remote sensing accuracy and support sustainable development, urban planning, and climate impact studies.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------Achievements-----------
+\section{Achievements}
+     \resumeItemListStart
+        \resumeItem{Runner Up at Google's Hack4Change(ISB Hyderabad, May 2023), Code4Change (Vellore, February 2024), Hackx2.0 (Vellore, September 2023)}
+        \vspace{-6pt}
+
+        \resumeItem{Expert on Codeforces,VIT's Under 20}
+        \vspace{-6pt}
+          
+
+\resumeItem{Represented Kendriya Vidyalaya at the National Basketball Championship in 2018,and aced the PRMO in 2019.}
+        \vspace{-6pt}
+        \resumeItem{Awarded the CBSE Certificate of Merit for outstanding performance in SSC Examination.}
+   \resumeItemListEnd
+
+\end{document}

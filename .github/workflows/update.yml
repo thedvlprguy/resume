@@ -1,0 +1,53 @@
+name: Build LaTeX document
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+            tlmgr update --self && tlmgr update --all
+            apk add make
+            make all
+      - name: Push to files
+        run: |
+          git config --global user.email "thegokueffect01@gmail.com@gmail.com"
+          git config --global user.name "thedvlprguy"
+          git clone https://thedvlprguy:${{ secrets.ACCESS_TOKEN }}@github.com/thedvlprguy/thedvlprguy.github.io.git target
+          mv resume.pdf ./target
+          cd ./target
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Automatic updation of resume from github.com/thedvlprguy/resume"
+          git push origin master
+      - name: Delete placeholder release
+        uses: actions/github-script@v6
+        continue-on-error: true # in case there's no existing release
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { owner, repo } = context.repo
+            const { data: { id } } = await github.rest.repos.getLatestRelease({ owner, repo })
+            await github.rest.repos.deleteRelease({ owner, repo, release_id: id })
+      - name: Delete release tag
+        run: |
+          git push --delete origin release
+        continue-on-error: true # in case there's no existing release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create new release
+        uses: softprops/action-gh-release@v1
+        with:
+          body: "Here's the built pdf of my resume!"
+          name: Latest
+          tag_name: release
+          files: |
+            ./target/resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
